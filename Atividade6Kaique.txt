@@ -1,0 +1,111 @@
+import java.util.Scanner;
+import Java.util.ArrayList;
+
+public class Simulador {
+    Scanner ler = new Scanner(System.in);
+
+    public void cenario1(){
+        int a, b, c, d;
+        System.out.printf("Digite o valor de A:");
+        a = ler.nextInt();
+
+        System.out.printf("Digite o valor de B:");
+        b = ler.nextInt();
+
+        System.out.printf("Digite o valor de C:");
+        c = ler.nextInt();
+
+        d = (a+b+c);
+        System.out.println("O valor total e: "+d);
+
+    }
+
+}
+ public void cenario2(){
+        int a, b, c, d;
+        System.out.printf("Digite o valor de A:");
+        a = ler.nextInt();
+        
+	System.out.printf("Digite o valor de B:");
+	b = ler.nextInt();
+
+	System.out.printf("Digite o valor de C:");
+	c = ler.nextInt();
+
+	d = (a-b-c);
+	System.out.println("O valor total e: "+d);	
+}
+    public void cenario4(){
+        int a, b, c;
+        System.out.printf("Digite o valor de A:");
+        a = ler.nextInt();
+
+        System.out.printf("Digite o valor de B:");
+        b = ler.nextInt();
+
+        c = (a/b);
+        System.out.println("O valor total e: "+c);
+
+    }
+
+	Public class void cenario5 {
+	int a, b, c;
+	Sytem.out.printf("Digite primeira nota:");
+	a = ler.nextInt();
+
+	System.out.printf("Digite o valor de B:");
+	b = ler.nextInt();
+
+	c = (a+b/2);
+	
+	if (c => 7){
+	System.out.printf("Sua média foi +c você está APROVADO")
+	
+	}else {
+	System.out.printf("Sua média foi +c você foi REPROVADO")
+}
+}
+Public static void cenario6() {
+	int a;	
+	System.out.printf("Digite o número maximo:");
+	a = ler.nextInt();
+
+	ArrayList<Integer> lista = new ArrayList<>();
+	for (int i = 0; i <= a; i++) {
+	   lista.add(i);
+	}
+	System.out.printf("Lista Ordenada Incremental até" +a +":" + lista);
+	}
+Public static void cenario7() {
+	int a;	
+	System.out.printf("Digite o número maximo:");
+	a = ler.nextInt();
+
+	ArrayList<Integer> lista = new ArrayList<>();
+	for (int i = a; i >= 0; i--) {
+	   lista.add(i);
+	}
+	System.out.printf("Lista Ordenada Descremental de" + a +":" + lista);
+	}
+public static void main() {
+	Scanner ler = new scanner(System.in);
+	double n1, n2;
+		
+	do {
+	   System.out.printf("Digite a primeira nota");
+	   n1 = scanner.nextDouble();
+	} while (n1 < 0 || n1 > 10);
+		
+	do {
+	   System.out.printf("Digite a segunda nota:");
+	   n2 = scanner.nextDouble();
+	} while (n2 < 0 || n2 > 10);
+
+        double media = (n1 + n2)/ 2;
+		
+	if (media >+ 7.0) {
+	   System.out printlf("Aprovado! a média foi de :" + media +);
+	} else {	
+	   System.out printlf("Reprovado! a média foi de :" + media +);
+        }
+    }
