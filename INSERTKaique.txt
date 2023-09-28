@@ -1,0 +1,48 @@
+FROM MECANICA
+INSERT INTO cliente (cpf, ID_Cliente, nome, telefone, endereço)
+VALUES
+    ('41067895323', '1', 'João Pedro Silva', '22975322590', 'Rua dos Pomares');
+    ('36523758423', '2', 'José Alves Souza', '11957706474', 'Rua das flores');
+    ('17754068899', '3', 'Carlos Cunha', '11957582706', 'Rua do recanto dos passaros');
+
+INSERT INTO veiculo (RENAVAN, chassi, modelo, cor, ID_Cliente)
+VALUES 
+   ('32503692578', '9BG265WED37C265001', 'FIAT ARGO', 'azul marinho', '1');
+   ('92570756841', '7CG657WYD56D256451', 'FIAT UNO', 'vermelho', '2');
+   ('56907488124', '5SD845WER51R874545', 'AUDI A5', 'preto', '3');
+
+INSERT INTO relato_cliente (ID_relato, problema, data, FK_veiculo);
+VALUES 
+   ('1352602', 'Problema na trasmissão', '07/02/2023', '1');
+   ('5694354', 'repimbôca da parafuseta', '08/03/2023' '2');
+   ('2687444', 'desgaste do pistão', '11/06/2023', '3');
+
+INSERT INTO orcamento (ID_Orcamento, DATA, previsao_entrega, forma_pagamento, FK_veiculo)
+VALUES 
+   ('1352602', '25/09/2023', '07/10/2023', 'debito', '1');
+   ('3265555', '19/10/2023', '30/11/2023', 'credito', '2');
+   ('3577042', '20/10/2023', '20/11/2023', 'dinheiro', '3');
+
+INSERT INTO serviço ( ID_servico, Custo, tempo_realização, descrição)
+VALUES	
+   ('1', '2.000,00', '8 horas', 'foi realizado a troca completa da trasmissão');
+   ('2', '2.500,00', '10 horas', 'foi realizado os apertos e ajustes necessarios');
+   ('3', '1.900,00', '7 horas', 'foi feito a retificação do pistão');
+
+INSERT INTO item_servico ( ID_orcamento, ID_produto, Custo, quantidade, situaçao, FK_orcamento, FK_produto)
+VALUES
+   ('1352602', '1', '700,00', '1', 'FEITO', '1352602','1');
+   ('3265555', '2', '900,00', '2', 'EM ANDAMENTO', '3265555', '2');
+   ('3577042', '3', '600,00', '3', 'EM ANDAMENTO', '3577042', '3');
+
+INSERT INTO Item_produto ( ID_orcamento, ID_produto, custo, quantidade, situacao, FK_orcamento, FK_produto)
+VALUES
+   ('1352602', '1', '500,00', '1', 'EM ESTOQUE', '1352602', '1');
+   ('3265555', '2', '400,00', '2', 'EM ESTOQUE', '1352602', '1');
+   ('3577042', '3', '450,00', '3', 'EM ESTOQUE', '1352602', '1');
+
+INSERT INTO produto (ID_Produto, Custo, descricao)
+VALUES
+   ('1', '50,00', 'Troca de oleo');
+   ('2', '150,00', 'troca de pastilhas do freio');
+   ('3', '200,00', 'troca dos fluidos da trasmissão');

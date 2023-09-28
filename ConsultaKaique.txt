@@ -1,0 +1,13 @@
+SELECT*FROM cliente;
+
+SELECT*FROM veiculo;
+
+SELECT*FROM relato_cliente;
+
+SELECT*FROM orcamento;
+
+SELECT*FROM item_servico;
+
+SELECT*FROM item_produto;
+
+SELECT*FROM produto;
